@@ -44,8 +44,8 @@ int main(int arg,char **argv)
 void init()
 {
 	glClearColor(0,0,0,0);
-	sm.create_shape("pyramid");
-	sm.begin("pyramid");
+	sm.create_shape("cube");
+	sm.begin("cube");
 }
 
 void display()
@@ -54,7 +54,7 @@ void display()
 	glClear(GL_COLOR_BUFFER_BIT);
 	glColor3f(1,1,1);
 	
-	sm.draw_shape("pyramid");
+	sm.draw_shape("cube");
 
 	//flush
 	glFlush();
@@ -65,9 +65,9 @@ void display()
 
 void animation()
 {
-	/*sm.unfold_shape("pyramid");
-	sm.fold_shape("pyramid");
-	glutPostRedisplay();*/
+	sm.unfold_shape("cube");
+	sm.fold_shape("cube");
+	glutPostRedisplay();
 }
 
 void reshape(int width,int height)
